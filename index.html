@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Routine Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Cleaning Routine Tracker</h1>
+            <div class="header-controls">
+                <button id="todayBtn" class="btn-secondary">Today</button>
+                <button id="clearAllBtn" class="btn-danger">Clear All</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- DAILY MORNING -->
+            <section class="routine-section">
+                <h2>🌅 DAILY — MORNING</h2>
+                <div class="task-list" id="morning"></div>
+            </section>
+
+            <!-- DAILY EVENING -->
+            <section class="routine-section">
+                <h2>🌙 DAILY — EVENING RESET</h2>
+                <div class="task-list" id="evening"></div>
+            </section>
+
+            <!-- LAUNDRY ROTATION -->
+            <section class="routine-section callout-info">
+                <h3>🧺 LAUNDRY ROTATION</h3>
+                <p class="laundry-schedule">Mon: Darks · Tue: Colors · Wed: Towels & Blankets · Thu: Alex's Work Clothes · Fri: Catch-up</p>
+            </section>
+
+            <!-- WEEKLY -->
+            <section class="routine-section">
+                <h2>📅 WEEKLY TASKS</h2>
+                <div id="weekly"></div>
+            </section>
+
+            <!-- MONTHLY -->
+            <section class="routine-section">
+                <h2>🗓️ MONTHLY TASKS (BY DATE)</h2>
+                <div class="task-list" id="monthly"></div>
+            </section>
+
+            <!-- SEASONAL -->
+            <section class="routine-section">
+                <h2>🌿 SEASONAL TASKS</h2>
+                <div id="seasonal"></div>
+            </section>
+
+            <!-- YEARLY SUMMER -->
+            <section class="routine-section">
+                <h2>🌞 YEARLY — SUMMER</h2>
+                <div class="task-list" id="yearly"></div>
+            </section>
+
+            <!-- SAFETY WARNING -->
+            <section class="routine-section callout-danger">
+                <h3>⚠️ NEVER MIX — Safety Rules</h3>
+                <ul class="safety-list">
+                    <li>Bleach + vinegar = chlorine gas</li>
+                    <li>Bleach + ammonia = toxic fumes</li>
+                    <li>Bleach + ECOS or Fabuloso = dangerous reaction</li>
+                    <li>When in doubt, check the label. Never mix cleaning products.</li>
+                </ul>
+            </section>
+
+            <!-- CLEANING CART -->
+            <section class="routine-section">
+                <h2>🛒 CLEANING CART — Mainstays 3-Tier</h2>
+                <details>
+                    <summary>View Cart Contents</summary>
+                    <div class="cart-contents">
+                        <h4>Top Tier:</h4>
+                        <ul>
+                            <li>Trash bags</li>
+                            <li>Blue basket with spin scrubber attachments</li>
+                        </ul>
+                        <h4>Middle Tier:</h4>
+                        <ul>
+                            <li>Clorox toilet wand + refills</li>
+                            <li>Rubber gloves</li>
+                            <li>Baking soda</li>
+                            <li>Clorox disinfecting wipes x2</li>
+                            <li>Vinegar + water spray bottle</li>
+                        </ul>
+                        <h4>Bottom Tier:</h4>
+                        <ul>
+                            <li>ECOS All Purpose Cleaner</li>
+                            <li>Clorox Disinfecting Mist</li>
+                            <li>Fabuloso & Water DIY spray</li>
+                            <li>Lysol Bathroom Foamer / Limescale Remover</li>
+                            <li>Clorox Bathroom Disinfecting Cleaner</li>
+                            <li>Windex Original</li>
+                            <li>Sprayway Glass Cleaner</li>
+                            <li>Lysol Disinfectant Spray</li>
+                            <li>Febreze Air</li>
+                            <li>Rejuvenate Floor Cleaner</li>
+                            <li>Soft scrub paste x2</li>
+                            <li>Magic Eraser x18</li>
+                            <li>Paper towels</li>
+                        </ul>
+                        <h4>Stored Nearby:</h4>
+                        <ul>
+                            <li>O-Cedar ProMist MAX mop</li>
+                            <li>Swiffer Extendable Duster</li>
+                            <li>Clorox Clean-Up Bleach gallon</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <footer>
+            <p>Last updated: <span id="lastUpdated">Never</span></p>
+        </footer>
+    </div>
+
+    <script src="data/tasks.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
